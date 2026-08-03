@@ -1,0 +1,128 @@
+:root {
+  --main-color: #2c3e50;
+  --accent-color: #3498db;
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: var(--main-color);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+header p {
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+/* Navigation */
+nav {
+  background: var(--accent-color);
+  text-align: center;
+  padding: 12px;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #e0e0e0;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+section {
+  margin-bottom: 30px;
+}
+section h2 {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Project cards */
+.project-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.project-card h3 {
+  margin-top: 0;
+  color: var(--accent-color);
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+form input, form textarea {
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+form button:hover {
+  background: #2874a6;
+}
+
+/* Footer */
+footer {
+  background: var(--main-color);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width:768px) {
+  nav { font-size: 14px; }
+  main { margin: 10px; }
+}
+
+@media (max-width:480px) {
+  header h1 { font-size: 1.6em; }
+  header p { font-size: 0.9em; }
+}
