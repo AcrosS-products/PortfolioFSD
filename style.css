@@ -14,7 +14,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
   background: var(--main-color);
   color: white;
@@ -47,7 +46,6 @@ nav a:hover {
   color: #e0e0e0;
 }
 
-/* Main content */
 main {
   max-width: 900px;
   margin: 20px auto;
@@ -66,7 +64,6 @@ section h2 {
   margin-bottom: 15px;
 }
 
-/* Project cards */
 .project-card {
   background: #fff;
   border: 1px solid #ddd;
@@ -79,7 +76,6 @@ section h2 {
   color: var(--accent-color);
 }
 
-/* Forms */
 form {
   display: flex;
   flex-direction: column;
@@ -107,7 +103,6 @@ form button:hover {
   background: #2874a6;
 }
 
-/* Footer */
 footer {
   background: var(--main-color);
   color: white;
@@ -116,13 +111,3 @@ footer {
   margin-top: 20px;
 }
 
-/* Responsive */
-@media (max-width:768px) {
-  nav { font-size: 14px; }
-  main { margin: 10px; }
-}
-
-@media (max-width:480px) {
-  header h1 { font-size: 1.6em; }
-  header p { font-size: 0.9em; }
-}
