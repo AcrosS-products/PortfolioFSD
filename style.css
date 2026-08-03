@@ -2,20 +2,19 @@
   --main-color: #2c3e50;
   --accent-color: #3498db;
   --bg-color: #f4f4f4;
-  --text-color: #333;
 }
 
 body {
   font-family: Arial, sans-serif;
   background: var(--bg-color);
-  color: var(--text-color);
+  color: #333;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
 
 header {
-  background: var(--main-color);
+  background: #2c3e50;
   color: white;
   text-align: center;
   padding: 30px 20px;
@@ -29,7 +28,6 @@ header p {
   font-size: 1em;
 }
 
-/* Navigation */
 nav {
   background: var(--accent-color);
   text-align: center;
@@ -40,7 +38,6 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 nav a:hover {
   color: #e0e0e0;
@@ -54,12 +51,13 @@ main {
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
 section {
   margin-bottom: 30px;
 }
 section h2 {
-  color: var(--main-color);
-  border-bottom: 2px solid var(--accent-color);
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
@@ -73,7 +71,7 @@ section h2 {
 }
 .project-card h3 {
   margin-top: 0;
-  color: var(--accent-color);
+  color: #3498db;
 }
 
 form {
@@ -92,15 +90,15 @@ form input, form textarea {
   border-radius: 4px;
 }
 form button {
-  background: var(--accent-color);
+  background: #3498db;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 10px 12px;
   cursor: pointer;
   border-radius: 4px;
 }
 form button:hover {
-  background: #2874a6;
+  background-color: #2874a6;
 }
 
 footer {
@@ -110,4 +108,3 @@ footer {
   padding: 15px;
   margin-top: 20px;
 }
-
