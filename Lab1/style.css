@@ -1,0 +1,110 @@
+:root {
+  --main-color: #2c3e50;
+  --accent-color: #3498db;
+  --bg-color: #f4f4f4;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+header p {
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+nav {
+  background: var(--accent-color);
+  text-align: center;
+  padding: 12px;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #e0e0e0;
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 30px;
+}
+section h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.project-card h3 {
+  margin-top: 0;
+  color: #3498db;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+form input, form textarea {
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+form button:hover {
+  background-color: #2874a6;
+}
+
+footer {
+  background: var(--main-color);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
