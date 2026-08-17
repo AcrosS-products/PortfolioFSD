@@ -1,0 +1,122 @@
+.contact-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  color: var(--text);
+}
+
+.contact-section {
+  padding: 30px 0;
+}
+
+.contact-label {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.contact-title {
+  margin: 0 0 12px;
+  font-size: 2.5rem;
+  color: var(--text);
+}
+
+.contact-description {
+  margin: 0 0 35px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  font: inherit;
+  color: var(--text);
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.form-error {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #ef4444;
+}
+
+.contact-button {
+  align-self: flex-start;
+
+  padding: 11px 22px;
+
+  font: inherit;
+  font-weight: 500;
+  color: #ffffff;
+
+  background: var(--accent);
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.contact-button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.contact-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .contact-page {
+    padding: 40px 20px;
+  }
+
+  .contact-title {
+    font-size: 2.2rem;
+  }
+}

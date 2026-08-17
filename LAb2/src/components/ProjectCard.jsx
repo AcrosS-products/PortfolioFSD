@@ -1,3 +1,4 @@
+import "./ProjectCard.css"
 function ProjectCard({
   title,
   description,
@@ -5,7 +6,7 @@ function ProjectCard({
   link
 }) {
   return (
-    <div>
+    <div className="card">
       <h2>{title}</h2>
 
       <p>{description}</p>

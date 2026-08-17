@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Contact.css";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -52,53 +53,75 @@ function Contact() {
     formData.message.trim();
 
   return (
-    <main>
-      <section>
-        <h1>Get in Touch</h1>
+    <main className="contact-page">
+      <section className="contact-section">
+        <p className="contact-label">CONTACT</p>
 
-        <form onSubmit={handleSubmit}>
+        <h1 className="contact-title">Get in Touch</h1>
 
-          <label htmlFor="name">Name:</label>
+        <p className="contact-description">
+          Have a question or want to work together? Feel free to send me a
+          message.
+        </p>
 
-          <input
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
 
-          {errors.name && <p>{errors.name}</p>}
+            <input
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your name"
+            />
 
+            {errors.name && (
+              <p className="form-error">{errors.name}</p>
+            )}
+          </div>
 
-          <label htmlFor="email">Email:</label>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
 
-          <input
-            id="email"
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="you@example.com"
+            />
 
-          {errors.email && <p>{errors.email}</p>}
+            {errors.email && (
+              <p className="form-error">{errors.email}</p>
+            )}
+          </div>
 
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
 
-          <label htmlFor="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Write your message..."
+              rows="6"
+            />
 
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
+            {errors.message && (
+              <p className="form-error">{errors.message}</p>
+            )}
+          </div>
 
-          {errors.message && <p>{errors.message}</p>}
-
-
-          <button type="submit" disabled={!isValid}>
-            Send
+          <button
+            className="contact-button"
+            type="submit"
+            disabled={!isValid}
+          >
+            Send Message
           </button>
-
         </form>
       </section>
     </main>

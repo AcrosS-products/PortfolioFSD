@@ -1,14 +1,13 @@
 import projects from "../data";
 import ProjectCard from "../components/ProjectCard";
-
+import "./Project.css"
 function Projects() {
   console.log("projects:", projects);
 
   return (
     <main>
-      <section>
-        <h1>My Projects</h1>
-
+      <h1>My Projects</h1>
+      <section className="cards">
         {projects.map((project) => (
           <ProjectCard
             key={project.id}
