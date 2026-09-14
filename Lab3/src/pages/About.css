@@ -1,0 +1,176 @@
+.about-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  color: var(--text);
+}
+
+/* Hero */
+
+.about-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.about-content {
+  max-width: 600px;
+}
+
+.about-label {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.about-title {
+  margin: 0 0 16px;
+  font-size: 3rem;
+  color: var(--text);
+}
+
+.about-title span {
+  color: var(--accent);
+}
+
+.about-intro {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Profile */
+
+.profile-image {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+}
+
+/* Sections */
+
+.about-section {
+  padding: 30px 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-title {
+  margin: 0 0 24px;
+  font-size: 1.4rem;
+  color: var(--text);
+}
+
+/* Education */
+
+.education-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.education-card h3 {
+  margin: 0 0 5px;
+  color: var(--text);
+}
+
+.education-card p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.score {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.education-details {
+  display: flex;
+  gap: 50px;
+  margin-top: 25px;
+}
+
+.education-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.education-details span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.education-details strong {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* Achievements */
+
+.achievement-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.achievement-card {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.achievement-number {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.achievement-card h3 {
+  margin: 0 0 5px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.achievement-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .about-page {
+    padding: 40px 20px;
+  }
+
+  .about-hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .about-title {
+    font-size: 2.4rem;
+  }
+
+  .profile-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .education-details {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .education-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

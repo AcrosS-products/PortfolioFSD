@@ -1,0 +1,162 @@
+{
+  "info": {
+    "name": "Assignment 3 - Portfolio Backend API Collection",
+    "description": "Postman Collection for CS1303 Assignment 3 Express API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "B1 - Server Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "B2 - Get All Projects",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/projects",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "projects"]
+        }
+      }
+    },
+    {
+      "name": "B3 - Get Single Project (Valid ID)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/projects/skill-swap",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "projects", "skill-swap"]
+        }
+      }
+    },
+    {
+      "name": "B3 - Get Single Project (Invalid ID - 404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/projects/non-existent-id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "projects", "non-existent-id"]
+        }
+      }
+    },
+    {
+      "name": "B4 - Submit Contact Form (Valid)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Arnav Sharma\",\n  \"email\": \"arnav@example.com\",\n  \"message\": \"Hello, I loved your portfolio!\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/contact",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contact"]
+        }
+      }
+    },
+    {
+      "name": "B4 - Submit Contact Form (Missing Field - 400)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"arnav@example.com\",\n  \"message\": \"Missing name field\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/contact",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contact"]
+        }
+      }
+    },
+    {
+      "name": "B4 - Submit Contact Form (Invalid Email - 400)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Arnav\",\n  \"email\": \"invalidemail\",\n  \"message\": \"Missing @ in email\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/contact",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contact"]
+        }
+      }
+    },
+    {
+      "name": "B5 - List Contact Submissions",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/contact",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contact"]
+        }
+      }
+    },
+    {
+      "name": "B6 - Centralized Error 404 Route",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/doesnotexist",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "doesnotexist"]
+        }
+      }
+    }
+  ]
+}
